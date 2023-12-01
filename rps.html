@@ -9,6 +9,8 @@
     <script>
         let rps = ["rock", "paper", "scissors"];
         let outcome = "";
+        let playerScore = 0;
+        let cpuScore = 0;
         
         function getComputerChoice(rps) {
         return rps[Math.floor(Math.random() * rps.length)];    
@@ -21,12 +23,33 @@
                         outcome = "Win!"
                     } else outcome = "Lose!"
                     return outcome;
+                    console.log(outcome);
+                    scoreRound(outcome);
                 };
+        
+        function playerPrompt(playerSelection) {
+            let playerSelection = prompt("Please enter your selection.", "Rock, Paper, or Scissors");
+            let playerSelectionNormalized = playerSelection.toLowerCase();
+            return (playerSelectionNormalized);
+        }
 
+        function scoreRound(outcome) {
+            if (outcome = "Win") {
+                let playerScore = playerScore+1, cpuScore = 0;
+            } else if (outcome = "Lose") {
+                let playerScore = 0, cpuScore = cpuScore+1;
+            } else {
+                let playerScore = playerScore, cpuScore = cpuScore;
+            }
+            return playerScore, cpuScore
+            console.log("Player: " + playerScore);
+            console.log("CPU: " + cpuScore);
+        }
 
-        let computerSelection = getComputerChoice(rps);
-        let playerSelection = prompt("Please enter your selection.", "Rock, Paper, or Scissors");
-        let playerSelectionNormalized = playerSelection.toLowerCase();
+        function game() {
+
+         /* Round 1 */   
+            playerPrompt(playerSelection);
         console.log("Player" + ":" + playerSelection);
         console.log("Computer" + ":" + computerSelection);
             if (playerSelectionNormalized != "rock" && playerSelectionNormalized != "paper" && playerSelectionNormalized != "scissors") {
@@ -34,7 +57,74 @@
             } else {
                 playRound(playerSelectionNormalized, computerSelection);
             };
+        
+            console.log("Round 1");
             console.log(outcome);
+            console.log("Player: " + playerScore);
+            console.log("CPU: " + cpuScore);
+
+         /* Round 2 */   
+         playerPrompt(playerSelection);
+        console.log("Player" + ":" + playerSelection);
+        console.log("Computer" + ":" + computerSelection);
+            if (playerSelectionNormalized != "rock" && playerSelectionNormalized != "paper" && playerSelectionNormalized != "scissors") {
+                Window.alert("Invalid Selection:\nPlease enter Rock, Paper, or Scissors")
+            } else {
+                playRound(playerSelectionNormalized, computerSelection);
+            };
+        
+            console.log("Round 2");
+            console.log(outcome);
+            console.log("Player: " + playerScore);
+            console.log("CPU: " + cpuScore);
+
+         /* Round 3 */   
+         playerPrompt(playerSelection);
+        console.log("Player" + ":" + playerSelection);
+        console.log("Computer" + ":" + computerSelection);
+            if (playerSelectionNormalized != "rock" && playerSelectionNormalized != "paper" && playerSelectionNormalized != "scissors") {
+                Window.alert("Invalid Selection:\nPlease enter Rock, Paper, or Scissors")
+            } else {
+                playRound(playerSelectionNormalized, computerSelection);
+            };
+        
+            console.log("Round 3");
+            console.log(outcome);
+            console.log("Player: " + playerScore);
+            console.log("CPU: " + cpuScore);
+
+         /* Round 4 */   
+         playerPrompt(playerSelection);
+        console.log("Player" + ":" + playerSelection);
+        console.log("Computer" + ":" + computerSelection);
+            if (playerSelectionNormalized != "rock" && playerSelectionNormalized != "paper" && playerSelectionNormalized != "scissors") {
+                Window.alert("Invalid Selection:\nPlease enter Rock, Paper, or Scissors")
+            } else {
+                playRound(playerSelectionNormalized, computerSelection);
+            };
+        
+            console.log("Round 4");
+            console.log(outcome);
+            console.log("Player: " + playerScore);
+            console.log("CPU: " + cpuScore);
+
+         /* Round 5 */   
+         playerPrompt(playerSelection);
+        console.log("Player" + ":" + playerSelection);
+        console.log("Computer" + ":" + computerSelection);
+            if (playerSelectionNormalized != "rock" && playerSelectionNormalized != "paper" && playerSelectionNormalized != "scissors") {
+                Window.alert("Invalid Selection:\nPlease enter Rock, Paper, or Scissors")
+            } else {
+                playRound(playerSelectionNormalized, computerSelection);
+            };
+        
+            console.log("Round 5");
+            console.log(outcome);
+            console.log("Player: " + playerScore);
+            console.log("CPU: " + cpuScore);
+            
+        }
+        
         
     </script>
 </body>
