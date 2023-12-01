@@ -28,6 +28,7 @@
                     } else if ((playerChoice == "rock" && computerSelection == "scissors") || (playerChoice == "paper" && computerSelection == "scissors") || (playerChoice == "scissors" && computerSelection == "paper")) {
                         outcome = "Win!"
                     } else outcome = "Lose!"
+                    scoreRound(outcome);
                     return outcome;
                 };
         
@@ -48,7 +49,6 @@
 
          /* Round 1 */   
             playRound();
-            scoreRound(outcome);
             console.log("Round 1");
             console.log(outcome);
             console.log("Player Score: " + playerScore);
@@ -56,7 +56,6 @@
 
          /* Round 2 */   
             playRound();
-            scoreRound(outcome);
             console.log("Round 2");
             console.log(outcome);
             console.log("Player Score: " + playerScore);
@@ -64,7 +63,6 @@
 
          /* Round 3 */   
             playRound();
-            scoreRound(outcome);
             console.log("Round 3");
             console.log(outcome);
             console.log("Player Score: " + playerScore);
@@ -72,7 +70,6 @@
 
          /* Round 4 */   
             playRound();
-            scoreRound(outcome);
             console.log("Round 4");
             console.log(outcome);
             console.log("Player Score: " + playerScore);
@@ -80,7 +77,6 @@
 
          /* Round 5 */   
             playRound();
-            scoreRound(outcome);
             console.log("Round 5");
             console.log(outcome);
             console.log("Player Score: " + playerScore);
