@@ -20,7 +20,7 @@
         /* Begins a new round and gathers new player/CPU input.  Compares the two to generate an outcome.  */
         function playRound() {
             let computerSelection = getComputerChoice(rps);
-            let playerChoice = prompt("Please enter your selection.", "Rock, Paper, or Scissors");
+            let playerChoice = prompt("Please enter your selection.", "Rock, Paper, or Scissors").toLowerCase();
             if (playerChoice != "rock" && playerChoice != "paper" && playerChoice != "scissors") {
                 alert("Invalid Selection:\nPlease enter Rock, Paper, or Scissors");
                     } else if (playerChoice == computerSelection) {
