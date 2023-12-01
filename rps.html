@@ -29,22 +29,18 @@
                         outcome = "Win!"
                     } else outcome = "Lose!"
                     return outcome;
-                    console.log(outcome);
-                    scoreRound(outcome);
                 };
         
         /* Takes the current outcome value and updates the player/CPU scores. */
         function scoreRound(outcome) {
             if (outcome = "Win") {
-                let playerScore = playerScore+1, cpuScore = 0;
+                playerScore = playerScore+1, cpuScore = 0;
             } else if (outcome = "Lose") {
-                let playerScore = 0, cpuScore = cpuScore+1;
+                playerScore = 0, cpuScore = cpuScore+1;
             } else {
-                let playerScore = playerScore, cpuScore = cpuScore;
+                playerScore = playerScore, cpuScore = cpuScore;
             }
             return playerScore, cpuScore
-            console.log("Player: " + playerScore);
-            console.log("CPU: " + cpuScore);
         }
 
         /* Begins game and calls round function.  Uses console.log to display info for each round. */
