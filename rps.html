@@ -12,10 +12,12 @@
         let playerScore = 0;
         let cpuScore = 0;
         
+        /* Returns random value from rps array to be CPU player's choice */
         function getComputerChoice(rps) {
         return rps[Math.floor(Math.random() * rps.length)];    
         };
 
+        /* Begins a new round and gathers new player/CPU input.  Compares the two to generate an outcome.  */
         function playRound() {
             let computerSelection = getComputerChoice(rps);
             let playerChoice = prompt("Please enter your selection.", "Rock, Paper, or Scissors");
@@ -31,7 +33,7 @@
                     scoreRound(outcome);
                 };
         
-
+        /* Takes the current outcome value and updates the player/CPU scores. */
         function scoreRound(outcome) {
             if (outcome = "Win") {
                 let playerScore = playerScore+1, cpuScore = 0;
@@ -45,6 +47,7 @@
             console.log("CPU: " + cpuScore);
         }
 
+        /* Begins game and calls round function.  Uses console.log to display info for each round. */
         function game() {
 
          /* Round 1 */   
