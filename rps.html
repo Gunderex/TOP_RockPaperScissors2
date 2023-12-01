@@ -34,9 +34,9 @@
         
         /* Takes the current outcome value and updates the player/CPU scores. */
         function scoreRound(outcome) {
-            if (outcome = "Win!") {
+            if (outcome == "Win!") {
                 playerScore = playerScore+1
-            } else if (outcome = "Lose!") {
+            } else if (outcome == "Lose!") {
                 cpuScore = cpuScore+1;
             }
             return playerScore, cpuScore;
