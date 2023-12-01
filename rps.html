@@ -8,31 +8,33 @@
 <body>
     <script>
         let rps = ["rock", "paper", "scissors"];
-        let outcome = ""
-
-        let computerSelection = function getComputerChoice(rps) {
-        return rps[Math.floor(Math.random() * rps.length)];    
-        }
-    
+        let outcome = "";
         
-        let playerSelection = prompt("Please enter your selection.", "Rock, Paper, or Scissors");
-        console.log(playerSelection);
-        let playerSelectionNormalized = playerSelection.toLowerCase();
-        console.log(playerSelectionNormalized)
-            if (playerSelectionNormalized != "rock" && playerSelectionNormalized != "paper" && playerSelectionNormalized != "scissors") {
-                outcome = "1"
-            } else {
-                function playRound(playerSelectionNormalized, computerSelection) {
+        function getComputerChoice(rps) {
+        return rps[Math.floor(Math.random() * rps.length)];    
+        };
+
+        function playRound(playerSelectionNormalized, computerSelection) {
                     if (playerSelectionNormalized == computerSelection) {
-                        outcome = "2"
+                        outcome = "Tie!"
                     } else if ((playerSelectionNormalized == "rock" && computerSelection == "scissors") || (playerSelectionNormalized == "paper" && computerSelection == "scissors") || (playerSelection == "scissors" && computerSelection == "paper")) {
-                        outcome = "3"
-                    } else outcome = "4"
+                        outcome = "Win!"
+                    } else outcome = "Lose!"
                     return outcome;
-                }
-            }
-        console.log(playerSelection);
-        console.log(outcome);
+                };
+
+
+        let computerSelection = getComputerChoice(rps);
+        let playerSelection = prompt("Please enter your selection.", "Rock, Paper, or Scissors");
+        let playerSelectionNormalized = playerSelection.toLowerCase();
+        console.log("Player" + ":" + playerSelection);
+        console.log("Computer" + ":" + computerSelection);
+            if (playerSelectionNormalized != "rock" && playerSelectionNormalized != "paper" && playerSelectionNormalized != "scissors") {
+                Window.alert("Invalid Selection:\nPlease enter Rock, Paper, or Scissors")
+            } else {
+                playRound(playerSelectionNormalized, computerSelection);
+            };
+            console.log(outcome);
         
     </script>
 </body>
