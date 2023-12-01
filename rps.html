@@ -9,6 +9,8 @@
     <script>
         let rps = ["rock", "paper", "scissors"];
         let outcome = "";
+        let playerChoice = "";
+        let computerSelection = "";
         let playerScore = 0;
         let cpuScore = 0;
         
@@ -19,8 +21,8 @@
 
         /* Begins a new round and gathers new player/CPU input.  Compares the two to generate an outcome.  */
         function playRound() {
-            let computerSelection = getComputerChoice(rps);
-            let playerChoice = prompt("Please enter your selection.", "Rock, Paper, or Scissors").toLowerCase();
+            computerSelection = getComputerChoice(rps);
+            playerChoice = prompt("Please enter your selection.", "Rock, Paper, or Scissors").toLowerCase();
             if (playerChoice != "rock" && playerChoice != "paper" && playerChoice != "scissors") {
                 alert("Invalid Selection:\nPlease enter Rock, Paper, or Scissors");
                     } else if (playerChoice == computerSelection) {
@@ -48,6 +50,8 @@
          /* Round 1 */   
             playRound();
             console.log("Round 1");
+            console.log("Player: " + playerChoice);
+            console.log("Computer: " + computerSelection);
             console.log(outcome);
             console.log("Player Score: " + playerScore);
             console.log("CPU Score: " + cpuScore);
@@ -55,6 +59,8 @@
          /* Round 2 */   
             playRound();
             console.log("Round 2");
+            console.log("Player: " + playerChoice);
+            console.log("Computer: " + computerSelection);
             console.log(outcome);
             console.log("Player Score: " + playerScore);
             console.log("CPU Score: " + cpuScore);
@@ -62,6 +68,8 @@
          /* Round 3 */   
             playRound();
             console.log("Round 3");
+            console.log("Player: " + playerChoice);
+            console.log("Computer: " + computerSelection);
             console.log(outcome);
             console.log("Player Score: " + playerScore);
             console.log("CPU Score: " + cpuScore);
@@ -69,6 +77,8 @@
          /* Round 4 */   
             playRound();
             console.log("Round 4");
+            console.log("Player: " + playerChoice);
+            console.log("Computer: " + computerSelection);
             console.log(outcome);
             console.log("Player Score: " + playerScore);
             console.log("CPU Score: " + cpuScore);
@@ -76,6 +86,8 @@
          /* Round 5 */   
             playRound();
             console.log("Round 5");
+            console.log("Player: " + playerChoice);
+            console.log("Computer: " + computerSelection);
             console.log(outcome);
             console.log("Player Score: " + playerScore);
             console.log("CPU Score: " + cpuScore);
