@@ -8,7 +8,8 @@
 <body>
     <script>
         let rps = ["rock", "paper", "scissors"];
-        
+        let outcome = ""
+
         let computerSelection = function getComputerChoice(rps) {
         return rps[Math.floor(Math.random() * rps.length)];    
         }
@@ -19,17 +20,19 @@
         let playerSelectionNormalized = playerSelection.toLowerCase();
         console.log(playerSelectionNormalized)
             if (playerSelectionNormalized != "rock" && playerSelectionNormalized != "paper" && playerSelectionNormalized != "scissors") {
-                window.alert("Invalid Selection: Please enter Rock, Paper, or Scissors");
+                outcome = "1"
             } else {
                 function playRound(playerSelectionNormalized, computerSelection) {
                     if (playerSelectionNormalized == computerSelection) {
-                        Window.alert("Tie! Play Again")
+                        outcome = "2"
                     } else if ((playerSelectionNormalized == "rock" && computerSelection == "scissors") || (playerSelectionNormalized == "paper" && computerSelection == "scissors") || (playerSelection == "scissors" && computerSelection == "paper")) {
-                        Window.alert("You Win!")
-                    } else Window.alert("You Lose! Play Again")
-        }
+                        outcome = "3"
+                    } else outcome = "4"
+                    return outcome;
+                }
             }
-            console.log(playerSelection);
+        console.log(playerSelection);
+        console.log(outcome);
         
     </script>
 </body>
