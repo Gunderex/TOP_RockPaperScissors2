@@ -16,10 +16,14 @@
         return rps[Math.floor(Math.random() * rps.length)];    
         };
 
-        function playRound(playerSelectionNormalized, computerSelection) {
-                    if (playerSelectionNormalized == computerSelection) {
+        function playRound() {
+            let computerSelection = getComputerChoice(rps);
+            let playerChoice = prompt("Please enter your selection.", "Rock, Paper, or Scissors");
+            if (playerChoice != "rock" && playerChoice != "paper" && playerChoice != "scissors") {
+                alert("Invalid Selection:\nPlease enter Rock, Paper, or Scissors");
+                    } else if (playerChoice == computerSelection) {
                         outcome = "Tie!"
-                    } else if ((playerSelectionNormalized == "rock" && computerSelection == "scissors") || (playerSelectionNormalized == "paper" && computerSelection == "scissors") || (playerSelection == "scissors" && computerSelection == "paper")) {
+                    } else if ((playerChoice == "rock" && computerSelection == "scissors") || (playerChoice == "paper" && computerSelection == "scissors") || (playerChoice == "scissors" && computerSelection == "paper")) {
                         outcome = "Win!"
                     } else outcome = "Lose!"
                     return outcome;
@@ -27,11 +31,6 @@
                     scoreRound(outcome);
                 };
         
-        function playerPrompt() {
-            let playerSelection = prompt("Please enter your selection.", "Rock, Paper, or Scissors");
-            let playerSelectionNormalized = playerSelection.toLowerCase();
-            return (playerSelectionNormalized);
-        }
 
         function scoreRound(outcome) {
             if (outcome = "Win") {
