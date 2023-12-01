@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let rps = ["rock", "paper", "scissors"];
+        
+        let computerSelection = function getComputerChoice(rps) {
+        return rps[Math.floor(Math.random() * rps.length)];    
+        }
+    
+        
+        let playerSelection = prompt("Please enter your selection.", "Rock, Paper, or Scissors");
+        console.log(playerSelection);
+        let playerSelectionNormalized = playerSelection.toLowerCase();
+        console.log(playerSelectionNormalized)
+            if (playerSelectionNormalized != "rock" && playerSelectionNormalized != "paper" && playerSelectionNormalized != "scissors") {
+                window.alert("Invalid Selection: Please enter Rock, Paper, or Scissors");
+            } else {
+                function playRound(playerSelectionNormalized, computerSelection) {
+                    if (playerSelectionNormalized == computerSelection) {
+                        Window.alert("Tie! Play Again")
+                    } else if ((playerSelectionNormalized == "rock" && computerSelection == "scissors") || (playerSelectionNormalized == "paper" && computerSelection == "scissors") || (playerSelection == "scissors" && computerSelection == "paper")) {
+                        Window.alert("You Win!")
+                    } else Window.alert("You Lose! Play Again")
+        }
+            }
+            console.log(playerSelection);
+        
+    </script>
+</body>
+</html>
