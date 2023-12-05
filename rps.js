@@ -19,7 +19,18 @@ let rps = ["rock", "paper", "scissors"];
                         outcome = "Win!"
                     } else outcome = "Lose!"
                     scoreRound(outcome);
-                    return outcome;
+                    
+                const resultPlayerScore = document.createElement("span");
+                resultPlayerScore.classList.add("resultPlayerSpan");
+                resultPlayerScore.textContent = playerScore;
+
+                const resultCPUScore = document.createElement("span");
+                resultCPUScore.classList.add("resultCPUSpan");
+                resultCPUScore.textContent = cpuScore;
+                
+                resultsDiv.appendChild(resultPlayerScore);
+                resultsDiv.appendChild(resultPlayerScore);
+
                 };
         
         /* Takes the current outcome value and updates the player/CPU scores. */
@@ -32,6 +43,8 @@ let rps = ["rock", "paper", "scissors"];
             return playerScore, cpuScore;
         }
 
+        /* Event handler for on click.  On button click passes button id as player choice
+        then runs playRound */
         function clickListener(event) {
             // Exit, if not a button was clicked
             if (event.target.tagName !== "BUTTON") {
@@ -43,9 +56,12 @@ let rps = ["rock", "paper", "scissors"];
          }
 
 const choiceDiv = document.querySelector("#choiceDiv");
+const resultsDiv = document.querySelector("#resultsDiv");
+
 const rockBtn = document.querySelector("#rock").addEventListener("click", clickListener);
 const paperBtn = document.querySelector("#paper").addEventListener("click", clickListener);
 const scissorsBtn = document.querySelector("#scissors").addEventListener("click", clickListener);
+
 
 
 
