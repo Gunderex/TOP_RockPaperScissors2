@@ -32,13 +32,28 @@ let rps = ["rock", "paper", "scissors"];
             return playerScore, cpuScore;
         }
 
-const choiceDiv = document.querySelector("#choiceDiv");
-const rockBtn = document.querySelector("#rock");
-const paperBtn = document.querySelector("#paper");
-const scissorBtn = document.querySelector("#scissor");
+        function clickListener(event) {
+            // Exit, if not a button was clicked
+            if (event.target.tagName !== "BUTTON") {
+               return;
+            }
+            const playerSelection = event.target.id;
+            console.log(playerSelection);
+            playRound(playerChoice);
+         }
 
-rockBtn.addEventListener('click', (playRound));
-paperBtn.addEventListener('click', (playRound));
-scissorBtn.addEventListener('click', (playRound));
+const choiceDiv = document.querySelector("#choiceDiv");
+const rockBtn = document.querySelector("#rock").addEventListener("click", clickListener);
+const paperBtn = document.querySelector("#paper").addEventListener("click", clickListener);
+const scissorsBtn = document.querySelector("#scissors").addEventListener("click", clickListener);
+
+
+
+        
+
+
+
+
+
 
         
