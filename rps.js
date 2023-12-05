@@ -37,8 +37,8 @@ const rockBtn = document.querySelector("#rock");
 const paperBtn = document.querySelector("#paper");
 const scissorBtn = document.querySelector("#scissor");
 
-rockBtn.addEventListener('click', (playRound(rock)));
-paperBtn.addEventListener('click', (playRound(paper)));
-scissorBtn.addEventListener('click', (playRound(scissor)));
+rockBtn.addEventListener('click', (playRound));
+paperBtn.addEventListener('click', (playRound));
+scissorBtn.addEventListener('click', (playRound));
 
         
