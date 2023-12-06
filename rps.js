@@ -24,6 +24,15 @@ let rps = ["rock", "paper", "scissors"];
 
                     resultPlayerScore.textContent = playerScore;
                     resultCPUScore.textContent = cpuScore;
+                    roundPlayer.textContent = playerChoice;
+                    roundCPU.textContent = computerSelection;
+                    roundOutcome.textContent = outcome;
+
+            if (playerScore == 5) {
+                alert("Congratulations!\nYou Win!\nReload to play again.");
+            } else if (cpuScore == 5) {
+                alert("Too Bad\nYou Lose\nReload to play again")
+            }
                 };
         
         /* Takes the current outcome value and updates the player/CPU scores. */
@@ -55,9 +64,10 @@ const paperBtn = document.querySelector("#paper").addEventListener("click", clic
 const scissorsBtn = document.querySelector("#scissors").addEventListener("click", clickListener);
 
 const resultPlayerScore = document.querySelector("#playerSpan");
-
-
 const resultCPUScore = document.querySelector("#cpuSpan");
+const roundPlayer = document.querySelector("#playerRoundSpan");
+const roundCPU = document.querySelector("#cpuRoundSpan");
+const roundOutcome = document.querySelector("#outcomeSpan");
 
 
 
