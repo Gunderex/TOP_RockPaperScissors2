@@ -19,18 +19,11 @@ let rps = ["rock", "paper", "scissors"];
                         outcome = "Win!"
                     } else outcome = "Lose!"
                     scoreRound(outcome);
-                    
-                const resultPlayerScore = document.createElement("span");
-                resultPlayerScore.classList.add("resultPlayerSpan");
-                resultPlayerScore.textContent = playerScore;
+                    console.log(playerScore);
+                    console.log(cpuScore);
 
-                const resultCPUScore = document.createElement("span");
-                resultCPUScore.classList.add("resultCPUSpan");
-                resultCPUScore.textContent = cpuScore;
-                
-                resultsDiv.appendChild(resultPlayerScore);
-                resultsDiv.appendChild(resultPlayerScore);
-
+                    resultPlayerScore.textContent.replace(playerScore);
+                    resultCPUScore.textContent.replace(cpuScore);
                 };
         
         /* Takes the current outcome value and updates the player/CPU scores. */
@@ -50,8 +43,7 @@ let rps = ["rock", "paper", "scissors"];
             if (event.target.tagName !== "BUTTON") {
                return;
             }
-            const playerSelection = event.target.id;
-            console.log(playerSelection);
+            playerChoice = event.target.id;
             playRound(playerChoice);
          }
 
@@ -61,6 +53,17 @@ const resultsDiv = document.querySelector("#resultsDiv");
 const rockBtn = document.querySelector("#rock").addEventListener("click", clickListener);
 const paperBtn = document.querySelector("#paper").addEventListener("click", clickListener);
 const scissorsBtn = document.querySelector("#scissors").addEventListener("click", clickListener);
+
+const resultPlayerScore = document.createElement("span");
+resultPlayerScore.classList.add("resultPlayerSpan");
+resultPlayerScore.textContent = "";
+
+const resultCPUScore = document.createElement("span");
+resultCPUScore.classList.add("resultCPUSpan");
+resultCPUScore.textContent = "";
+
+playerSpan.appendChild(resultPlayerScore);
+cpuSpan.appendChild(resultCPUScore);
 
 
 
