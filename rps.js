@@ -22,8 +22,8 @@ let rps = ["rock", "paper", "scissors"];
                     console.log(playerScore);
                     console.log(cpuScore);
 
-                    resultPlayerScore.textContent.replace(playerScore);
-                    resultCPUScore.textContent.replace(cpuScore);
+                    resultPlayerScore.textContent = playerScore;
+                    resultCPUScore.textContent = cpuScore;
                 };
         
         /* Takes the current outcome value and updates the player/CPU scores. */
@@ -54,16 +54,13 @@ const rockBtn = document.querySelector("#rock").addEventListener("click", clickL
 const paperBtn = document.querySelector("#paper").addEventListener("click", clickListener);
 const scissorsBtn = document.querySelector("#scissors").addEventListener("click", clickListener);
 
-const resultPlayerScore = document.createElement("span");
-resultPlayerScore.classList.add("resultPlayerSpan");
-resultPlayerScore.textContent = "";
+const resultPlayerScore = document.querySelector("#playerSpan");
 
-const resultCPUScore = document.createElement("span");
-resultCPUScore.classList.add("resultCPUSpan");
-resultCPUScore.textContent = "";
 
-playerSpan.appendChild(resultPlayerScore);
-cpuSpan.appendChild(resultCPUScore);
+const resultCPUScore = document.querySelector("#cpuSpan");
+
+
+
 
 
 
